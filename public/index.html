@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Axeel Rafael Cerrato Beltran - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,7 +15,7 @@
         }
 
         body {
-            font-family: 'Courier New', monospace;
+            font-family: 'JetBrains Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
             background: #1e1e1e;
             color: #ffffff;
             overflow-x: hidden;
@@ -36,6 +39,33 @@
             text-align: center;
             position: relative;
             padding: 2rem 0;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+            gap: 3rem;
+        }
+
+        .hero-text {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-image {
+            flex: 0 0 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .keyboard-3d-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
         }
 
         .hero h1 {
@@ -285,7 +315,7 @@
         .project-name {
             color: #ffffff;
             font-size: 0.9rem;
-            font-family: 'Courier New', monospace;
+            font-family: 'JetBrains Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
         }
 
         .project-tech {
@@ -408,7 +438,19 @@
             animation: fadeInUp 0.8s ease forwards;
         }
 
-        /* Responsive */
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-image {
+                flex: none;
+                margin-top: 2rem;
+            }
+        }
+
         @media (max-width: 768px) {
             .experience-container {
                 flex-direction: column;
@@ -437,6 +479,14 @@
             .key-engineer {
                 width: 90px;
             }
+
+            .hero-content {
+                gap: 1.5rem;
+            }
+
+            .keyboard-3d-image {
+                max-width: 300px;
+            }
         }
     </style>
 </head>
@@ -444,30 +494,40 @@
     <div class="container">
         <!-- Hero Section -->
         <section class="hero">
-            <h1 class="fade-in">Hola, soy Axeel Rafael Cerrato Beltran</h1>
-            <p class="fade-in">Transformando procesos empresariales complejos en soluciones tecnológicas inteligentes.</p>
-            
-            <div class="stats fade-in">
-                <div class="stat-item">
-                    <div class="stat-number">03+</div>
-                    <div class="stat-label">Años EXP</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">15+</div>
-                    <div class="stat-label">Proyectos</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">02+</div>
-                    <div class="stat-label">Empresas</div>
-                </div>
-            </div>
-
-            <div class="keyboard-container fade-in">
-                <div class="keyboard">
-                    <div class="keyboard-base">
-                        <div class="key key-ai">Odoo</div>
-                        <div class="key key-engineer">Engineer</div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="fade-in">Hola, soy Axeel Rafael Cerrato Beltran</h1>
+                    <p class="fade-in">Transformando procesos empresariales complejos en soluciones tecnológicas inteligentes.</p>
+                    
+                    <div class="stats fade-in">
+                        <div class="stat-item">
+                            <div class="stat-number">03+</div>
+                            <div class="stat-label">Años EXP</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Proyectos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">02+</div>
+                            <div class="stat-label">Empresas</div>
+                        </div>
                     </div>
+
+                    <div class="keyboard-container fade-in">
+                        <div class="keyboard">
+                            <div class="keyboard-base">
+                                <div class="key key-ai">Odoo</div>
+                                <div class="key key-engineer">Engineer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image fade-in">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23f8f9fa'/%3E%3Cstop offset='100%25' style='stop-color:%23e9ecef'/%3E%3C/linearGradient%3E%3ClinearGradient id='keyboard' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23e8e8e8'/%3E%3Cstop offset='100%25' style='stop-color:%23c0c0c0'/%3E%3C/linearGradient%3E%3ClinearGradient id='key' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ffffff'/%3E%3Cstop offset='100%25' style='stop-color:%23f0f0f0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23bg)'/%3E%3Cpath d='M100 450 Q200 400 700 450' stroke='%23ddd' stroke-width='3' fill='none'/%3E%3Cg transform='translate(200,250) rotate(-10) skewY(-5)'%3E%3Crect x='0' y='0' width='400' height='200' rx='25' fill='url(%23keyboard)' stroke='%23b8b8b8' stroke-width='2'/%3E%3Crect x='30' y='160' width='60' height='8' rx='4' fill='%234a90e2'/%3E%3Cg transform='translate(50,80)'%3E%3Crect x='0' y='0' width='80' height='60' rx='12' fill='url(%23key)' stroke='%23d0d0d0' stroke-width='2'/%3E%3Ctext x='40' y='38' text-anchor='middle' font-family='Arial' font-size='16' font-weight='bold' fill='%238b5cf6'%3EAI%3C/text%3E%3C/g%3E%3Cg transform='translate(150,80)'%3E%3Crect x='0' y='0' width='120' height='60' rx='12' fill='url(%23key)' stroke='%23d0d0d0' stroke-width='2'/%3E%3Ctext x='60' y='38' text-anchor='middle' font-family='Arial' font-size='16' font-weight='bold' fill='%238b5cf6'%3EEngineer%3C/text%3E%3C/g%3E%3C/g%3E%3C/svg%3E" 
+                         alt="Teclado 3D con teclas AI y Engineer" 
+                         class="keyboard-3d-image" />
                 </div>
             </div>
         </section>
