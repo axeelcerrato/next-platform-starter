@@ -43,29 +43,15 @@
 
         .hero-content {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             width: 100%;
             max-width: 1200px;
-            gap: 3rem;
         }
 
         .hero-text {
-            flex: 1;
             text-align: center;
-        }
-
-        .hero-image {
-            flex: 0 0 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .keyboard-3d-image {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
         }
 
         .hero h1 {
@@ -327,6 +313,24 @@
             font-weight: bold;
         }
 
+        /* Certifications Section */
+        .certifications-section {
+            margin: 5rem 0;
+        }
+
+        .certifications-grid {
+            display: flex;
+            justify-content: center;
+            margin: 3rem 0;
+        }
+
+        .certification-category {
+            background: rgba(90, 159, 212, 0.08);
+            border: 1px solid rgba(90, 159, 212, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+        }
+
         /* Skills Section */
         .skills-container {
             display: grid;
@@ -513,21 +517,6 @@
                             <div class="stat-label">Empresas</div>
                         </div>
                     </div>
-
-                    <div class="keyboard-container fade-in">
-                        <div class="keyboard">
-                            <div class="keyboard-base">
-                                <div class="key key-ai">Odoo</div>
-                                <div class="key key-engineer">Engineer</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="hero-image fade-in">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23f8f9fa'/%3E%3Cstop offset='100%25' style='stop-color:%23e9ecef'/%3E%3C/linearGradient%3E%3ClinearGradient id='keyboard' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23e8e8e8'/%3E%3Cstop offset='100%25' style='stop-color:%23c0c0c0'/%3E%3C/linearGradient%3E%3ClinearGradient id='key' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ffffff'/%3E%3Cstop offset='100%25' style='stop-color:%23f0f0f0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23bg)'/%3E%3Cpath d='M100 450 Q200 400 700 450' stroke='%23ddd' stroke-width='3' fill='none'/%3E%3Cg transform='translate(200,250) rotate(-10) skewY(-5)'%3E%3Crect x='0' y='0' width='400' height='200' rx='25' fill='url(%23keyboard)' stroke='%23b8b8b8' stroke-width='2'/%3E%3Crect x='30' y='160' width='60' height='8' rx='4' fill='%234a90e2'/%3E%3Cg transform='translate(50,80)'%3E%3Crect x='0' y='0' width='80' height='60' rx='12' fill='url(%23key)' stroke='%23d0d0d0' stroke-width='2'/%3E%3Ctext x='40' y='38' text-anchor='middle' font-family='Arial' font-size='16' font-weight='bold' fill='%238b5cf6'%3EAI%3C/text%3E%3C/g%3E%3Cg transform='translate(150,80)'%3E%3Crect x='0' y='0' width='120' height='60' rx='12' fill='url(%23key)' stroke='%23d0d0d0' stroke-width='2'/%3E%3Ctext x='60' y='38' text-anchor='middle' font-family='Arial' font-size='16' font-weight='bold' fill='%238b5cf6'%3EEngineer%3C/text%3E%3C/g%3E%3C/g%3E%3C/svg%3E" 
-                         alt="Teclado 3D con teclas AI y Engineer" 
-                         class="keyboard-3d-image" />
                 </div>
             </div>
         </section>
@@ -552,48 +541,136 @@
             <h2 class="section-title">Proyectos</h2>
             <div class="projects-grid">
                 <div class="project-category fade-in">
-                    <h3 class="category-title">ERP & Automatización</h3>
+                    <h3 class="category-title">Odoo</h3>
                     <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
                         <span class="project-name">Módulos Personalizados ODOO</span>
                         <span class="project-tech">Python</span>
                     </a>
                     <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
-                        <span class="project-name">Integración con APIs RESTful</span>
-                        <span class="project-tech">JavaScript</span>
-                    </a>
-                    <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
-                        <span class="project-name">Automatización con n8n</span>
-                        <span class="project-tech">n8n</span>
-                    </a>
-                    <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
-                        <span class="project-name">Optimización PostgreSQL</span>
-                        <span class="project-tech">PostgreSQL</span>
+                        <span class="project-name">Optimización de Procesos ERP</span>
+                        <span class="project-tech">ODOO</span>
                     </a>
                     <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
                         <span class="project-name">Mesa de Servicios ITIL</span>
                         <span class="project-tech">ITIL</span>
                     </a>
+                    <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
+                        <span class="project-name">Integración de Módulos</span>
+                        <span class="project-tech">Python</span>
+                    </a>
                 </div>
 
                 <div class="project-category fade-in">
-                    <h3 class="category-title">Desarrollo Móvil</h3>
+                    <h3 class="category-title">Automatización</h3>
                     <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
-                        <span class="project-name">Apps Complementarias ERP</span>
-                        <span class="project-tech">React Native</span>
+                        <span class="project-name">Automatización con n8n</span>
+                        <span class="project-tech">n8n</span>
+                    </a>
+                    <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
+                        <span class="project-name">Workflows con Zapier</span>
+                        <span class="project-tech">Zapier</span>
+                    </a>
+                    <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
+                        <span class="project-name">Automatización con Make</span>
+                        <span class="project-tech">Make</span>
+                    </a>
+                    <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
+                        <span class="project-name">Chatbots con ManyChat</span>
+                        <span class="project-tech">ManyChat</span>
                     </a>
                     <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
                         <span class="project-name">Chatbots WhatsApp</span>
                         <span class="project-tech">WhatsApp API</span>
                     </a>
+                </div>
+
+                <div class="project-category fade-in">
+                    <h3 class="category-title">APIs RESTful</h3>
+                    <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
+                        <span class="project-name">Integración con APIs RESTful</span>
+                        <span class="project-tech">JavaScript</span>
+                    </a>
+                    <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
+                        <span class="project-name">Desarrollo de APIs</span>
+                        <span class="project-tech">Python</span>
+                    </a>
                     <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
                         <span class="project-name">Microservicios</span>
                         <span class="project-tech">Docker</span>
+                    </a>
+                    <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
+                        <span class="project-name">Apps Móviles con APIs</span>
+                        <span class="project-tech">React Native</span>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
+        <!-- Certifications Section -->
+        <section class="certifications-section">
+            <h2 class="section-title">Certificaciones</h2>
+            <div class="certifications-grid">
+                <div class="certification-category fade-in">
+                    <h3 class="category-title">Certificaciones</h3>
+                    <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
+                        <span class="project-name">Curso Profesional de Scrum</span>
+                        <span class="project-tech">Platzi</span>
+                    </a>
+                    <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
+                        <span class="project-name">Curso de Fundamentos de Product Owner</span>
+                        <span class="project-tech">Platzi</span>
+                    </a>
+                    <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
+                        <span class="project-name">Curso de Historias de Usuario en Scrum</span>
+                        <span class="project-tech">Platzi</span>
+                    </a>
+                    <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
+                        <span class="project-name">Curso de Liderazgo para Equipos de Trabajo</span>
+                        <span class="project-tech">Platzi</span>
+                    </a>
+                    <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
+                        <span class="project-name">Social Media Strategy Professional Certification (SMSPC™)</span>
+                        <span class="project-tech">CertiProf</span>
+                    </a>
+                    <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
+                        <span class="project-name">Curso de Introducción a la Inteligencia Artificial</span>
+                        <span class="project-tech">Platzi</span>
+                    </a>
+                    <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
+                        <span class="project-name">Curso de Scrum Master</span>
+                        <span class="project-tech">Platzi</span>
+                    </a>
+                    <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
+                        <span class="project-name">Curso de ChatBot con WhatsApp API</span>
+                        <span class="project-tech">Platzi</span>
+                    </a>
+                    <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
+                        <span class="project-name">Curso de Patrones de Diseño y SOLID en Python</span>
+                        <span class="project-tech">Platzi</span>
+                    </a>
+                    <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
+                        <span class="project-name">Curso de Docker: Fundamentos</span>
+                        <span class="project-tech">Platzi</span>
+                    </a>
+                    <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
+                        <span class="project-name">Curso de Git y GitHub</span>
+                        <span class="project-tech">Platzi</span>
+                    </a>
+                    <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
+                        <span class="project-name">Curso de Zapier</span>
+                        <span class="project-tech">Platzi</span>
+                    </a>
+                    <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
+                        <span class="project-name">Remote Work and Virtual Collaboration Certificate (RWVCPC™)</span>
+                        <span class="project-tech">CertiProf</span>
+                    </a>
+                    <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="project-item">
+                        <span class="project-name">Scrum Foundation Professional Certificate (SFPC™)</span>
+                        <span class="project-tech">CertiProf</span>
+                    </a>
+                </div>
+            </div>
+        </section>
         <section class="skills-section">
             <h2 class="section-title">Habilidades Técnicas</h2>
             <div class="skills-container">
