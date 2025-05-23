@@ -16,7 +16,7 @@
 
         body {
             font-family: 'JetBrains Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
-            background: #2d2d2d;
+            background: #18181b;
             color: #ffffff;
             overflow-x: hidden;
             scroll-behavior: smooth;
@@ -444,22 +444,21 @@
 
         /* Responsive adjustments */
         @media (max-width: 1024px) {
-            .hero-content {
+            .experience-layout {
                 flex-direction: column;
-                text-align: center;
+                gap: 2rem;
             }
             
-            .hero-image {
+            .experience-content {
                 flex: none;
-                margin-top: 2rem;
+            }
+            
+            .experience-image-space {
+                min-height: 200px;
             }
         }
 
         @media (max-width: 768px) {
-            .experience-container {
-                flex-direction: column;
-            }
-            
             .stats {
                 gap: 1rem;
             }
@@ -468,28 +467,15 @@
                 min-width: 100px;
                 padding: 0.8rem 1.5rem;
             }
-            
-            .keyboard-base {
-                width: 250px;
-                height: 120px;
-            }
-            
-            .key-ai, .key-engineer {
-                width: 60px;
-                height: 40px;
-                font-size: 0.8rem;
-            }
-            
-            .key-engineer {
-                width: 90px;
-            }
 
-            .hero-content {
+            .experience-layout {
                 gap: 1.5rem;
+                padding: 0 1rem;
             }
 
-            .keyboard-3d-image {
-                max-width: 300px;
+            .experience-image-space {
+                min-height: 150px;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -524,27 +510,27 @@
         <!-- Experience Section -->
         <section class="experience-section">
             <h2 class="section-title">Experiencia</h2>
-            <div class="experience-container">
-                <div class="experience-card fade-in">
-                    <div class="experience-header">
-                        <div class="company-name">B-Intell</div>
-                        <div class="job-title">Analista de Desarrollo</div>
+            <div class="experience-layout">
+                <div class="experience-content">
+                    <div class="experience-container">
+                        <div class="experience-card fade-in">
+                            <div class="experience-header">
+                                <div class="company-name">B-Intell</div>
+                                <div class="job-title">Analista de Desarrollo</div>
+                            </div>
+                        </div>
+                        
+                        <div class="experience-card fade-in">
+                            <div class="experience-header">
+                                <div class="company-name">Servicios Digitales Quip</div>
+                                <div class="job-title">Desarrollador en Prácticas</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="experience-details">
-                        Desarrollo e implemento módulos personalizados en ODOO, automatizando procesos críticos y reduciendo tiempos operativos en 40%. Optimizo bases de datos PostgreSQL y desarrollo integraciones con APIs RESTful.
-                    </div>
-                    <div class="experience-period">Jul. 2022 - Actualmente</div>
                 </div>
                 
-                <div class="experience-card fade-in">
-                    <div class="experience-header">
-                        <div class="company-name">Servicios Digitales Quip</div>
-                        <div class="job-title">Desarrollador en Prácticas</div>
-                    </div>
-                    <div class="experience-details">
-                        Desarrollé e implementé módulos en ODOO para optimizar procesos internos. Diseñé y creé una mesa de servicios basada en el marco de referencia ITIL.
-                    </div>
-                    <div class="experience-period">Ene. 2022 - Jun. 2022</div>
+                <div class="experience-image-space">
+                    <span>Espacio para imagen</span>
                 </div>
             </div>
         </section>
