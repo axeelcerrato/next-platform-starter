@@ -361,6 +361,11 @@
         .code-line {
             margin-bottom: 0.2rem;
             min-height: 1.4rem;
+            opacity: 0;
+        }
+
+        .code-line.typing {
+            opacity: 1;
         }
 
         .indent {
@@ -407,32 +412,13 @@
             color: var(--accent);
         }
 
-        .typing-line {
-            opacity: 0;
-            animation: typeIn 0.5s ease forwards;
-        }
-
-        .typing-line:nth-child(16) {
-            animation-delay: 3s;
-        }
-
-        .typing-line:nth-child(17) {
-            animation-delay: 4s;
-        }
-
-        .typing-line:nth-child(18) {
-            animation-delay: 5s;
-        }
-
-        .typing-line:nth-child(19) {
-            animation-delay: 6s;
-        }
-
-        .cursor-typing {
+        .typing-cursor {
             background: var(--primary);
             color: var(--primary);
             animation: blink 1s infinite;
-            margin-left: 0.5ch;
+            margin-left: 2px;
+            display: inline-block;
+            width: 2px;
         }
 
         @keyframes typeIn {
@@ -911,65 +897,46 @@
                                 <span>20</span>
                             </div>
                             <div class="code-content">
-                                <div class="code-line">
-                                    <span class="keyword">class</span> <span class="class-name">AxeelDeveloper</span><span class="punctuation">:</span>
+                                <div class="code-line" data-text='class AxeelDeveloper:'>
                                 </div>
-                                <div class="code-line">
-                                    <span class="indent"></span><span class="keyword">def</span> <span class="function">__init__</span><span class="punctuation">(</span><span class="keyword">self</span><span class="punctuation">):</span>
+                                <div class="code-line" data-text='    def __init__(self):'>
                                 </div>
-                                <div class="code-line">
-                                    <span class="indent"></span><span class="indent"></span><span class="keyword">self</span><span class="punctuation">.</span><span class="property">name</span> <span class="operator">=</span> <span class="string">"Axeel Rafael Cerrato Beltran"</span>
+                                <div class="code-line" data-text='        self.name = "Axeel Rafael Cerrato Beltran"'>
                                 </div>
-                                <div class="code-line">
-                                    <span class="indent"></span><span class="indent"></span><span class="keyword">self</span><span class="punctuation">.</span><span class="property">title</span> <span class="operator">=</span> <span class="string">"Ingeniero en Sistemas"</span>
+                                <div class="code-line" data-text='        self.title = "Ingeniero en Sistemas"'>
                                 </div>
-                                <div class="code-line">
-                                    <span class="indent"></span><span class="indent"></span><span class="keyword">self</span><span class="punctuation">.</span><span class="property">role</span> <span class="operator">=</span> <span class="string">"Full Stack Developer"</span>
+                                <div class="code-line" data-text='        self.role = "Full Stack Developer"'>
                                 </div>
-                                <div class="code-line">
-                                    <span class="indent"></span><span class="indent"></span><span class="keyword">self</span><span class="punctuation">.</span><span class="property">experience_years</span> <span class="operator">=</span> <span class="number">3</span><span class="operator">+</span>
+                                <div class="code-line" data-text='        self.experience_years = 3+'>
                                 </div>
-                                <div class="code-line">
-                                    <span class="indent"></span><span class="indent"></span><span class="keyword">self</span><span class="punctuation">.</span><span class="property">specialization</span> <span class="operator">=</span> <span class="string">"ODOO Framework"</span>
+                                <div class="code-line" data-text='        self.specialization = "ODOO Framework"'>
                                 </div>
-                                <div class="code-line">
-                                    <span class="indent"></span><span class="indent"></span><span class="keyword">self</span><span class="punctuation">.</span><span class="property">core_skills</span> <span class="operator">=</span> <span class="punctuation">[</span>
+                                <div class="code-line" data-text='        self.core_skills = ['>
                                 </div>
-                                <div class="code-line">
-                                    <span class="indent"></span><span class="indent"></span><span class="indent"></span><span class="string">"Python"</span><span class="punctuation">,</span> <span class="string">"JavaScript"</span><span class="punctuation">,</span> <span class="string">"PostgreSQL"</span><span class="punctuation">,</span>
+                                <div class="code-line" data-text='            "Python", "JavaScript", "PostgreSQL",'>
                                 </div>
-                                <div class="code-line">
-                                    <span class="indent"></span><span class="indent"></span><span class="indent"></span><span class="string">"React Native"</span><span class="punctuation">,</span> <span class="string">"Docker"</span><span class="punctuation">,</span> <span class="string">"Linux"</span>
+                                <div class="code-line" data-text='            "React Native", "Docker", "Linux"'>
                                 </div>
-                                <div class="code-line">
-                                    <span class="indent"></span><span class="indent"></span><span class="punctuation">]</span>
+                                <div class="code-line" data-text='        ]'>
                                 </div>
-                                <div class="code-line">
-                                    <span class="indent"></span><span class="indent"></span><span class="keyword">self</span><span class="punctuation">.</span><span class="property">automation_tools</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="string">"n8n"</span><span class="punctuation">,</span> <span class="string">"Zapier"</span><span class="punctuation">,</span> <span class="string">"Make"</span><span class="punctuation">]</span>
+                                <div class="code-line" data-text='        self.automation_tools = ["n8n", "Zapier", "Make"]'>
                                 </div>
-                                <div class="code-line">
-                                    <span class="indent"></span><span class="indent"></span><span class="keyword">self</span><span class="punctuation">.</span><span class="property">efficiency_improvement</span> <span class="operator">=</span> <span class="string">"40%"</span>
+                                <div class="code-line" data-text='        self.efficiency_improvement = "40%"'>
                                 </div>
-                                <div class="code-line">
-                                    <span class="indent"></span><span class="indent"></span><span class="keyword">self</span><span class="punctuation">.</span><span class="property">education</span> <span class="operator">=</span> <span class="string">"Maestría Gestión Proyectos (90%)"</span>
+                                <div class="code-line" data-text='        self.education = "Maestría Gestión Proyectos (90%)"'>
                                 </div>
-                                <div class="code-line">
-                                    <span class="indent"></span><span class="indent"></span><span class="keyword">self</span><span class="punctuation">.</span><span class="property">passion</span> <span class="operator">=</span> <span class="string">"Soluciones Innovadoras"</span>
+                                <div class="code-line" data-text='        self.passion = "Soluciones Innovadoras"'>
                                 </div>
-                                <div class="code-line typing-line">
-                                    <span class="indent"></span><span class="keyword">def</span> <span class="function">optimize_business_workflows</span><span class="punctuation">(</span><span class="keyword">self</span><span class="punctuation">):</span>
+                                <div class="code-line" data-text='    def optimize_business_workflows(self):'>
                                 </div>
-                                <div class="code-line typing-line">
-                                    <span class="indent"></span><span class="indent"></span><span class="keyword">return</span> <span class="string">"Mejoras hasta 40% eficiencia"</span>
+                                <div class="code-line" data-text='        return "Mejoras hasta 40% eficiencia"'>
                                 </div>
-                                <div class="code-line typing-line">
-                                    <span class="indent"></span><span class="keyword">def</span> <span class="function">create_robust_solutions</span><span class="punctuation">(</span><span class="keyword">self</span><span class="punctuation">):</span>
+                                <div class="code-line" data-text='    def create_robust_solutions(self):'>
                                 </div>
-                                <div class="code-line typing-line">
-                                    <span class="indent"></span><span class="indent"></span><span class="keyword">return</span> <span class="string">"Arquitecturas escalables & APIs"</span>
+                                <div class="code-line" data-text='        return "Arquitecturas escalables & APIs"'>
                                 </div>
-                                <div class="code-line">
-                                    <span class="cursor-typing">|</span>
+                                <div class="cursor-line">
+                                    <span class="typing-cursor">|</span>
                                 </div>
                             </div>
                         </div>
@@ -1356,45 +1323,96 @@
             window.addEventListener('scroll', updateActiveNav);
         }
 
-        // Typing animation for terminal
-        function initTerminalAnimation() {
-            const commands = [
-                { command: 'cat about.txt', output: 'Desarrollador apasionado por la tecnología' },
-                { command: 'ls projects/', output: 'ODOO/ Automation/ APIs/ Mobile/' },
-                { command: 'grep -r "innovation"', output: 'Siempre buscando nuevas soluciones' },
-                { command: 'echo $PASSION', output: 'Crear código que impacte positivamente' }
-            ];
+        // Typing animation for code editor
+        function initCodeTypingAnimation() {
+            const codeLines = document.querySelectorAll('.code-line[data-text]');
+            const cursor = document.querySelector('.typing-cursor');
+            let currentLine = 0;
+            let currentChar = 0;
+            
+            function typeCharacter() {
+                if (currentLine >= codeLines.length) {
+                    // Animation complete
+                    if (cursor) cursor.style.display = 'none';
+                    return;
+                }
 
-            let currentCommand = 0;
-            const terminalBody = document.querySelector('.terminal-body');
+                const line = codeLines[currentLine];
+                const text = line.getAttribute('data-text');
+                
+                if (currentChar === 0) {
+                    line.classList.add('typing');
+                    line.style.opacity = '1';
+                }
 
-            function typeCommand() {
-                if (currentCommand < commands.length) {
-                    setTimeout(() => {
-                        const newLine = document.createElement('div');
-                        newLine.className = 'terminal-line';
-                        newLine.innerHTML = `
-                            <span class="prompt">$</span>
-                            <span class="command">${commands[currentCommand].command}</span>
-                        `;
-                        
-                        const cursorLine = terminalBody.querySelector('.terminal-line:last-child');
-                        terminalBody.insertBefore(newLine, cursorLine);
-
-                        setTimeout(() => {
-                            const outputLine = document.createElement('div');
-                            outputLine.className = 'terminal-line';
-                            outputLine.innerHTML = `<span class="output">${commands[currentCommand].output}</span>`;
-                            terminalBody.insertBefore(outputLine, cursorLine);
-                            currentCommand++;
-                            typeCommand();
-                        }, 1000);
-                    }, 3000);
+                if (currentChar < text.length) {
+                    const char = text[currentChar];
+                    const typedText = text.substring(0, currentChar + 1);
+                    
+                    // Apply syntax highlighting
+                    line.innerHTML = applySyntaxHighlighting(typedText);
+                    
+                    currentChar++;
+                    
+                    // Adjust typing speed based on character
+                    let delay = 30; // Base delay
+                    if (char === ' ') delay = 15;
+                    if (char === '\n') delay = 100;
+                    if ('.,;:()[]{}=+-*/"'.includes(char)) delay = 20;
+                    
+                    setTimeout(typeCharacter, delay);
+                } else {
+                    // Move to next line
+                    currentLine++;
+                    currentChar = 0;
+                    setTimeout(typeCharacter, 200); // Pause between lines
                 }
             }
 
+            function applySyntaxHighlighting(text) {
+                // Simple syntax highlighting function
+                let highlighted = text;
+                
+                // Keywords
+                highlighted = highlighted.replace(/\b(class|def|self|return)\b/g, '<span class="keyword">$1</span>');
+                
+                // Strings
+                highlighted = highlighted.replace(/"([^"]*)"/g, '<span class="string">"$1"</span>');
+                
+                // Numbers
+                highlighted = highlighted.replace(/\b(\d+)\b/g, '<span class="number">$1</span>');
+                
+                // Class names
+                highlighted = highlighted.replace(/\b(AxeelDeveloper)\b/g, '<span class="class-name">$1</span>');
+                
+                // Function names
+                highlighted = highlighted.replace(/\b(__init__|optimize_business_workflows|create_robust_solutions)\b/g, '<span class="function">$1</span>');
+                
+                // Properties
+                highlighted = highlighted.replace(/\.(name|title|role|experience_years|specialization|core_skills|automation_tools|efficiency_improvement|education|passion)\b/g, '.<span class="property">$1</span>');
+                
+                // Operators
+                highlighted = highlighted.replace(/([=+\-\[\],])/g, '<span class="operator">$1</span>');
+                
+                // Punctuation
+                highlighted = highlighted.replace(/([():])/g, '<span class="punctuation">$1</span>');
+                
+                // Add indentation
+                const lines = highlighted.split('\n');
+                const indentedLines = lines.map(line => {
+                    const leadingSpaces = line.match(/^ */)[0].length;
+                    const indentCount = Math.floor(leadingSpaces / 4);
+                    const indents = '<span class="indent"></span>'.repeat(indentCount);
+                    return indents + line.trim();
+                });
+                
+                return indentedLines.join('<br>');
+            }
+
             // Start typing animation after a delay
-            setTimeout(typeCommand, 2000);
+            setTimeout(() => {
+                typeCharacter();
+            }, 1000);
         }
 
         // Parallax effect for hero section
@@ -1416,7 +1434,7 @@
             initScrollAnimations();
             initSmoothScrolling();
             initActiveNavigation();
-            initTerminalAnimation();
+            initCodeTypingAnimation();
             initParallaxEffect();
         });
 
