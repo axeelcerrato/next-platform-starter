@@ -278,8 +278,8 @@
             border-bottom: 1px solid var(--border);
             display: flex;
             align-items: center;
-            justify-content: space-between;
             padding: 0.75rem 1rem;
+            position: relative;
         }
 
         .editor-dots {
@@ -297,9 +297,9 @@
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.9rem;
             color: var(--text-secondary);
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            flex: 1;
+            text-align: center;
+            margin: 0 1rem;
         }
 
         .editor-tabs {
@@ -334,7 +334,7 @@
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.9rem;
             line-height: 1.6;
-            min-height: 400px;
+            min-height: 280px;
         }
 
         .line-numbers {
@@ -866,7 +866,7 @@
                                 <div class="editor-dot dot-yellow"></div>
                                 <div class="editor-dot dot-green"></div>
                             </div>
-                            <div class="editor-title">axeel_developer_profile.py</div>
+                            <div class="editor-title">axeel_profile.py</div>
                             <div class="editor-tabs">
                                 <div class="tab active">main.py</div>
                                 <div class="tab">odoo_modules.py</div>
@@ -885,55 +885,25 @@
                                 <span>8</span>
                                 <span>9</span>
                                 <span>10</span>
-                                <span>11</span>
-                                <span>12</span>
-                                <span>13</span>
-                                <span>14</span>
-                                <span>15</span>
-                                <span>16</span>
-                                <span>17</span>
-                                <span>18</span>
-                                <span>19</span>
-                                <span>20</span>
                             </div>
                             <div class="code-content">
                                 <div class="code-line" data-text='class AxeelDeveloper:'>
                                 </div>
                                 <div class="code-line" data-text='    def __init__(self):'>
                                 </div>
-                                <div class="code-line" data-text='        self.name = "Axeel Rafael Cerrato Beltran"'>
-                                </div>
-                                <div class="code-line" data-text='        self.title = "Ingeniero en Sistemas"'>
+                                <div class="code-line" data-text='        self.name = "Axeel Rafael Cerrato"'>
                                 </div>
                                 <div class="code-line" data-text='        self.role = "Full Stack Developer"'>
                                 </div>
-                                <div class="code-line" data-text='        self.experience_years = 3+'>
+                                <div class="code-line" data-text='        self.experience = "3+ años ODOO"'>
                                 </div>
-                                <div class="code-line" data-text='        self.specialization = "ODOO Framework"'>
+                                <div class="code-line" data-text='        self.skills = ["Python", "JavaScript"]'>
                                 </div>
-                                <div class="code-line" data-text='        self.core_skills = ['>
+                                <div class="code-line" data-text='        self.efficiency = "40% mejora"'>
                                 </div>
-                                <div class="code-line" data-text='            "Python", "JavaScript", "PostgreSQL",'>
+                                <div class="code-line" data-text='    def create_solutions(self):'>
                                 </div>
-                                <div class="code-line" data-text='            "React Native", "Docker", "Linux"'>
-                                </div>
-                                <div class="code-line" data-text='        ]'>
-                                </div>
-                                <div class="code-line" data-text='        self.automation_tools = ["n8n", "Zapier", "Make"]'>
-                                </div>
-                                <div class="code-line" data-text='        self.efficiency_improvement = "40%"'>
-                                </div>
-                                <div class="code-line" data-text='        self.education = "Maestría Gestión Proyectos (90%)"'>
-                                </div>
-                                <div class="code-line" data-text='        self.passion = "Soluciones Innovadoras"'>
-                                </div>
-                                <div class="code-line" data-text='    def optimize_business_workflows(self):'>
-                                </div>
-                                <div class="code-line" data-text='        return "Mejoras hasta 40% eficiencia"'>
-                                </div>
-                                <div class="code-line" data-text='    def create_robust_solutions(self):'>
-                                </div>
-                                <div class="code-line" data-text='        return "Arquitecturas escalables & APIs"'>
+                                <div class="code-line" data-text='        return "Soluciones Innovadoras"'>
                                 </div>
                                 <div class="cursor-line">
                                     <span class="typing-cursor">|</span>
@@ -1370,43 +1340,43 @@
             }
 
             function applySyntaxHighlighting(text) {
-                // Simple syntax highlighting function
+                // Enhanced syntax highlighting function with proper colors
                 let highlighted = text;
                 
-                // Keywords
+                // Apply indentation first
+                const leadingSpaces = text.match(/^ */)[0].length;
+                const indentCount = Math.floor(leadingSpaces / 4);
+                const indents = '<span class="indent"></span>'.repeat(indentCount);
+                const trimmedText = text.trim();
+                
+                // Reset highlighted to trimmed text for processing
+                highlighted = trimmedText;
+                
+                // Keywords (pink/magenta)
                 highlighted = highlighted.replace(/\b(class|def|self|return)\b/g, '<span class="keyword">$1</span>');
                 
-                // Strings
+                // Strings (green)
                 highlighted = highlighted.replace(/"([^"]*)"/g, '<span class="string">"$1"</span>');
                 
-                // Numbers
-                highlighted = highlighted.replace(/\b(\d+)\b/g, '<span class="number">$1</span>');
+                // Numbers (purple)
+                highlighted = highlighted.replace(/\b(\d+)\+?/g, '<span class="number">$1</span>');
                 
-                // Class names
+                // Class names (light green)
                 highlighted = highlighted.replace(/\b(AxeelDeveloper)\b/g, '<span class="class-name">$1</span>');
                 
-                // Function names
-                highlighted = highlighted.replace(/\b(__init__|optimize_business_workflows|create_robust_solutions)\b/g, '<span class="function">$1</span>');
+                // Function names (yellow)
+                highlighted = highlighted.replace(/\b(__init__|create_solutions)\b/g, '<span class="function">$1</span>');
                 
-                // Properties
-                highlighted = highlighted.replace(/\.(name|title|role|experience_years|specialization|core_skills|automation_tools|efficiency_improvement|education|passion)\b/g, '.<span class="property">$1</span>');
+                // Properties (cyan/blue)
+                highlighted = highlighted.replace(/\.(name|role|experience|skills|efficiency)\b/g, '.<span class="property">$1</span>');
                 
-                // Operators
-                highlighted = highlighted.replace(/([=+\-\[\],])/g, '<span class="operator">$1</span>');
+                // Operators (red/pink)
+                highlighted = highlighted.replace(/([=\[\],])/g, '<span class="operator">$1</span>');
                 
-                // Punctuation
+                // Punctuation (white)
                 highlighted = highlighted.replace(/([():])/g, '<span class="punctuation">$1</span>');
                 
-                // Add indentation
-                const lines = highlighted.split('\n');
-                const indentedLines = lines.map(line => {
-                    const leadingSpaces = line.match(/^ */)[0].length;
-                    const indentCount = Math.floor(leadingSpaces / 4);
-                    const indents = '<span class="indent"></span>'.repeat(indentCount);
-                    return indents + line.trim();
-                });
-                
-                return indentedLines.join('<br>');
+                return indents + highlighted;
             }
 
             // Start typing animation after a delay
